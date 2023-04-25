@@ -8,7 +8,6 @@ class ChatCompletion extends DTO
 {
     public function __construct(
         public readonly string $model,
-//        /** @var Message[] $messages */
         public readonly array $messages,
         public readonly ?int $temperature = null,
         public readonly ?int $topP = null,
