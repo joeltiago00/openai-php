@@ -21,6 +21,11 @@ This is a project to make easy the integration of your system with OpenAI API.
     <td>Creates a completion for the provided prompt and parameters.</td>    
 </tr>
 
+<tr>
+    <td><a href="https://platform.openai.com/docs/api-reference/images/create-edit">Create Edit</a></td>
+    <td>Creates an edited or extended image given an original image and a prompt.</td>    
+</tr>
+
 </tbody>
 </table>
 
