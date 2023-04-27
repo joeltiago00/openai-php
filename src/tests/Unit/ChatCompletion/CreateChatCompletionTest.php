@@ -6,8 +6,11 @@ use OpenIA\Modules\Chat\DTO\ChatCompletion;
 use OpenIA\OpenIA;
 use PHPUnit\Framework\TestCase;
 
-class ChatTest extends TestCase
+class CreateChatCompletionTest extends TestCase
 {
+    /**
+     * @group l
+     */
     public function testSuccessWithNumberOperation()
     {
         $service = new OpenIA(config('app.secret-key'));
@@ -16,12 +19,15 @@ class ChatTest extends TestCase
             ['role' => 'user', 'content' => '1+1=?']
         ]);
 
-        $response = $service->chat()
-        ->createChatCompletion($dto);
+        $response = $service->chatCompletion()
+        ->create($dto);
 
         $this->assertEquals(2, $response['choices'][0]['message']['content']);
     }
 
+    /**
+     * @group l
+     */
     public function testFailInvalidToken()
     {
         $service = new OpenIA('invalid_key');
@@ -30,8 +36,8 @@ class ChatTest extends TestCase
             ['role' => 'user', 'content' => '1+1=?']
         ]);
 
-        $response = $service->chat()
-            ->createChatCompletion($dto);
+        $response = $service->chatCompletion()
+            ->create($dto);
 
         $this->assertEquals('invalid_api_key', $response['error']['code']);
     }

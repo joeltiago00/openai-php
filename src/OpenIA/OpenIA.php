@@ -6,7 +6,7 @@ use OpenIA\Contracts\ChatInterface;
 use OpenIA\Contracts\ModelInterface;
 use OpenIA\Contracts\OpenIAClientInterface;
 use OpenIA\Contracts\OpenIAServiceInterface;
-use OpenIA\Modules\Chat\Chat;
+use OpenIA\Modules\Chat\ChatCompletion;
 use OpenIA\Modules\Model\Model;
 
 class OpenIA implements OpenIAServiceInterface
@@ -18,12 +18,12 @@ class OpenIA implements OpenIAServiceInterface
         $this->client = new OpenIAClient($secretKey);
     }
 
-    public function chat(): ChatInterface
+    public function chatCompletion(): ChatInterface
     {
-        return new Chat($this->client);
+        return new ChatCompletion($this->client);
     }
 
-    public function model(): ModelInterface
+    public function models(): ModelInterface
     {
         return new Model($this->client);
     }

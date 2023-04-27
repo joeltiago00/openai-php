@@ -7,4 +7,4 @@ require_once 'src/index.php';
 
 $service = new OpenIA(config('app.secret-key'));
 
-$models = $service->model()->list();
+$models = $service->models()->list();
