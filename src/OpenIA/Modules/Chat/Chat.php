@@ -5,15 +5,15 @@ namespace OpenIA\Modules\Chat;
 use OpenIA\Contracts\ChatInterface;
 use OpenIA\Contracts\OpenIAClientInterface;
 use OpenIA\Enums\RouteEnum;
-use OpenIA\Modules\Chat\DTO\ChatCompletion as ChatCompletionDTO;
+use OpenIA\Modules\Chat\DTO\ChatCompletion;
 
-class ChatCompletion implements ChatInterface
+class Chat implements ChatInterface
 {
     public function __construct(private readonly OpenIAClientInterface $client)
     {
     }
 
-    public function create(ChatCompletionDTO $chatCompletion): array
+    public function createChatCompletion(ChatCompletion $chatCompletion): array
     {
         $body = json_encode($chatCompletion->toArray());
 

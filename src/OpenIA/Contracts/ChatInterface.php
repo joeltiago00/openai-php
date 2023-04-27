@@ -6,5 +6,5 @@ use OpenIA\Modules\Chat\DTO\ChatCompletion;
 
 interface ChatInterface
 {
-    public function create(ChatCompletion $chatCompletion): array;
+    public function createChatCompletion(ChatCompletion $chatCompletion): array;
 }

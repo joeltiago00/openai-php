@@ -12,4 +12,4 @@ $dto = new ChatCompletion('gpt-3.5-turbo', [
     ['role' => 'user', 'content' => '1+1=?']
 ]);
 
-$response = $service->chatCompletion()->create($dto);
+$response = $service->chat()->createChatCompletion($dto);

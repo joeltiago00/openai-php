@@ -19,8 +19,8 @@ class CreateChatCompletionTest extends TestCase
             ['role' => 'user', 'content' => '1+1=?']
         ]);
 
-        $response = $service->chatCompletion()
-        ->create($dto);
+        $response = $service->chat()
+        ->createChatCompletion($dto);
 
         $this->assertEquals(2, $response['choices'][0]['message']['content']);
     }
@@ -36,8 +36,8 @@ class CreateChatCompletionTest extends TestCase
             ['role' => 'user', 'content' => '1+1=?']
         ]);
 
-        $response = $service->chatCompletion()
-            ->create($dto);
+        $response = $service->chat()
+            ->createChatCompletion($dto);
 
         $this->assertEquals('invalid_api_key', $response['error']['code']);
     }
