@@ -31,7 +31,12 @@ This is a project to make easy the integration of your system with OpenAI API.
     <td>Creates an image given a prompt.</td>    
 </tr>
 
+<tr>
+    <td><a href="https://platform.openai.com/docs/api-reference/images/create-edit">Create image edit</a></td>
+    <td>Creates an edited or extended image given an original image and a prompt.</td>    
+</tr>
+
 </tbody>
 </table>
 
-<strong>PS: You can find usage examples at /examples</strong>
+<strong>PS: You can find usage examples at [/examples](/examples)</strong>
