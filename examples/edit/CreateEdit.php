@@ -1,6 +1,6 @@
 <?php
 
-use OpenIA\Modules\Chat\DTO\Edit;
+use OpenIA\Modules\Edit\DTO\Edit;
 use OpenIA\OpenIA;
 
 require_once 'src/vendor/autoload.php';
@@ -15,4 +15,4 @@ $dto = new Edit(
 
 $dto->setInput('nighborhood');
 
-$response = $service->chat()->createEdit($dto);
+$response = $service->edit()->create($dto);
