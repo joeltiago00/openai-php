@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenIA\Modules\Chat\DTO;
+namespace OpenIA\Modules\Edit\DTO;
 
 use OpenIA\DTO;
 

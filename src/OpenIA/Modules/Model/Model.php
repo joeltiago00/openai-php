@@ -17,6 +17,6 @@ class Model implements ModelInterface
         $response = $this->client
             ->get(RouteEnum::LIST_MODELS->route());
 
-        return json_decode($response->getBody(), true);
+        return responseToArray($response);
     }
 }

@@ -8,9 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class CreateChatCompletionTest extends TestCase
 {
-    /**
-     * @group l
-     */
     public function testSuccessWithNumberOperation()
     {
         $service = new OpenIA(config('app.secret-key'));
@@ -25,9 +22,6 @@ class CreateChatCompletionTest extends TestCase
         $this->assertEquals(2, $response['choices'][0]['message']['content']);
     }
 
-    /**
-     * @group l
-     */
     public function testFailInvalidToken()
     {
         $service = new OpenIA('invalid_key');
